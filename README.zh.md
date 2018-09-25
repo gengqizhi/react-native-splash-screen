@@ -174,6 +174,17 @@ public class MainActivity extends ReactActivity {
 </LinearLayout>
 ```
 
+再创建一个名为 launch_screen_en.xml 的布局文件来自定义你的启动屏幕。
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launch_screen_en">
+</LinearLayout>
+```
+
 **另外:**
 
 你也可以启用app主题透明选项来解决在APP启动时因主题原因导致的短暂白屏的问题,具体步骤如下:

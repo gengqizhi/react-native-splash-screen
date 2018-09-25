@@ -1,6 +1,7 @@
 package com.cboy.rn.splashscreen;
 import android.app.Activity;
 import android.app.Dialog;
+import java.util.Locale;
 
 import java.lang.ref.WeakReference;
 /**
@@ -27,7 +28,11 @@ public class SplashScreen {
                 if (!activity.isFinishing()) {
 
                     mSplashDialog = new Dialog(activity,fullScreen? R.style.SplashScreen_Fullscreen:R.style.SplashScreen_SplashTheme);
-                    mSplashDialog.setContentView(R.layout.launch_screen);
+                    if((Locale.getDefault()+"").substring(0,2).equals("en")){
+                        mSplashDialog.setContentView(R.layout.launch_screen_en);
+                    }else{
+                        mSplashDialog.setContentView(R.layout.launch_screen);
+                    }
                     mSplashDialog.setCancelable(false);
 
                     if (!mSplashDialog.isShowing()) {
